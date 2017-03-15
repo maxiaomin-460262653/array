@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="list">
+    <p>p</p>
+    <span>span</span>
+    <div>hello</div>
+</ul>
+
+</body>
+</html>
+<script>
+    var arr=[],
+        ary=[1,[2,[3,4],5,6]];
+function sort(ary) {
+    for(var i=0;i<ary.length;i++){
+        if(typeof ary[i]=='number'){
+            arr.push(ary[i]);
+        }else{
+            sort(ary[i]);
+        }
+    }
+}
+sort(ary);
+console.log(arr);
+
+
+
+
+
+</script>
